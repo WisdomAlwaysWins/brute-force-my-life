@@ -45,3 +45,16 @@ print(solution3("lowercase", "x"))
 
 print(solution3_1("programmers", "p"))
 print(solution3_1("lowercase", "x"))
+
+/*
+ 순서 바꾸기
+ 
+ 정수 리스트 num_list와 정수 n이 주어질 때, num_list를 n 번째 원소 이후의 원소들과 n 번째까지의 원소들로 나눠 n 번째 원소 이후의 원소들을 n 번째까지의 원소들 앞에 붙인 리스트를 return하도록 solution 함수를 완성해주세요.
+*/
+
+func solution4(_ num_list:[Int], _ n:Int) -> [Int] {
+    return Array(num_list[n...]) + Array(num_list[..<n])
+}
+
+print(solution4([2,1,6], 1)) // [1, 6, 2]
+print(solution4([5, 2, 1, 7, 5], 3)) // [7, 5, 5, 2, 1]
