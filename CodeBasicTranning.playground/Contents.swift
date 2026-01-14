@@ -74,3 +74,15 @@ func solution5(_ arr:[Int], _ k: Int) -> [Int] {
 print(solution5([1,2,3, 100, 99, 98], 3)) // [3, 6, 9, 300, 297, 294]
 print(solution5([1,2,3, 100, 99, 98], 2)) // [3, 4, 5, 102, 101, 100]
 
+/*
+ l로 만들기
+ 
+ 알파벳 소문자로 이루어진 문자열 myString이 주어집니다. 알파벳 순서에서 "l"보다 앞서는 모든 문자를 "l"로 바꾼 문자열을 return 하는 solution 함수를 완성해 주세요.
+*/
+
+func solution6(_ myString:String) -> String {
+    return String(myString.map { $0 < "l" ? "l" : $0 })
+}
+
+print(solution6("abcdevwxyz"))
+print(solution6("jjnnllkkmm"))
