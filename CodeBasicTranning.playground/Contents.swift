@@ -23,3 +23,25 @@ func solution2(_ myString: String) -> String {
 
 print(solution2("aBcDeFg"))
 print(solution2("AAA"))
+
+/*
+ 특정 문자를 대문자로 바꾸기
+ 
+ 영소문자로 이루어진 문자열 my_string과 영소문자 1글자로 이루어진 문자열 alp가 매개변수로 주어질 때, my_string에서 alp에 해당하는 모든 글자를 대문자로 바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
+*/
+
+func solution3(_ my_string:String, _ alp:String) -> String {
+    return String(my_string.replacingOccurrences(of: alp, with: alp.uppercased()))
+}
+
+func solution3_1(_ my_string:String, _ alp:String) -> String {
+    return String(my_string.map({
+        String($0) == alp ? Character(alp.uppercased()) : $0
+    }))
+}
+
+print(solution3("programmers", "p"))
+print(solution3("lowercase", "x"))
+
+print(solution3_1("programmers", "p"))
+print(solution3_1("lowercase", "x"))
