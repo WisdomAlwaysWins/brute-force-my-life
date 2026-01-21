@@ -1,0 +1,12 @@
+import Foundation
+
+func solution(_ bin1:String, _ bin2:String) -> String {
+
+    let a = Int(bin1, radix: 2)!
+    let b = Int(bin2, radix: 2)!
+
+    return String(a+b, radix: 2)
+}
+
+print(solution("10", "11"))
+print(solution("1001", "1111"))
